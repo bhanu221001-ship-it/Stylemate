@@ -1,0 +1,711 @@
+time=2026-10-28T02:03:15.335+05:30 level=INFO source=routes.go:2454 msg="server config" env="map[HTTPS_PROXY: HTTP_PROXY: LLAMA_ARG_FIT: LLAMA_ARG_FIT_TARGET: NO_PROXY: OLLAMA_CONTEXT_LENGTH:32768 OLLAMA_CREATE_REMOTE:false OLLAMA_DEBUG:INFO OLLAMA_DEBUG_LOG_REQUESTS:false OLLAMA_EDITOR: OLLAMA_FLASH_ATTENTION:false OLLAMA_GO_TEMPLATE:true OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://127.0.0.1:11434 OLLAMA_IGPU_ENABLE: OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:2 OLLAMA_MAX_QUEUE:512 OLLAMA_MAX_TRANSFER_STREAMS:4 OLLAMA_MODELS:/Users/saket/.ollama/models OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NO_CLOUD:false OLLAMA_NUM_PARALLEL:1 OLLAMA_ORIGINS:[* http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://* vscode-file://*] OLLAMA_REMOTES:[ollama.com] OLLAMA_SCHED_SPREAD:false http_proxy: https_proxy: no_proxy:]"
+time=2026-10-28T02:03:15.335+05:30 level=INFO source=routes.go:2456 msg="Ollama cloud disabled: false"
+time=2026-10-28T02:03:15.336+05:30 level=INFO source=images.go:1007 msg="total blobs: 6"
+time=2026-10-28T02:03:15.336+05:30 level=INFO source=images.go:1016 msg="total unused blobs removed: 0"
+time=2026-10-28T02:03:15.336+05:30 level=INFO source=routes.go:2516 msg="Listening on 127.0.0.1:11434 (version 0.40.11)"
+time=2026-10-28T02:03:15.337+05:30 level=INFO source=runner.go:60 msg="discovering available GPUs..."
+time=2026-10-28T02:03:15.410+05:30 level=INFO source=types.go:32 msg="inference compute" id=0 filter_id=0 library=Metal compute=0.0 name=MTL0 description="Apple M5" libdirs="" driver=0.0 pci_id="" type=iGPU total="11.8 GiB" available="11.8 GiB"
+time=2026-10-28T02:03:15.410+05:30 level=INFO source=routes.go:2566 msg="vram-based default context" total_vram="11.8 GiB" default_num_ctx=4096
+time=2026-10-28T02:03:15.672+05:30 level=INFO source=model_recommendations.go:177 msg="model recommendations cache sleep scheduled" wait=3h54m36.366724987s consecutive_failures=0
+[GIN] 2026/10/28 - 02:03:15 | 200 |   1.71ms |       127.0.0.1 | GET      "/api/tags"
+[GIN] 2026/10/28 - 02:03:15 | 200 |   1.12ms |       127.0.0.1 | GET      "/api/tags"
+[GIN] 2026/10/28 - 02:03:15 | 200 | 872.875µs |       127.0.0.1 | GET      "/api/tags"
+[GIN] 2026/10/28 - 02:03:15 | 200 | 618.084µs |       127.0.0.1 | GET      "/api/tags"
+[GIN] 2026/10/28 - 02:03:15 | 200 |  9.166µs |       127.0.0.1 | HEAD     "/"
+time=2026-10-28T02:03:23.200+05:30 level=INFO source=download.go:182 msg="downloading 9c3e4853af40 in 16 314 MB part(s)"
+[GIN] 2026/10/28 - 02:06:56 | 204 | 948.125µs |       127.0.0.1 | OPTIONS  "/api/chat"
+time=2026-10-28T02:06:56.350+05:30 level=INFO source=server.go:107 msg="using llama-server for model" model=/Users/saket/.ollama/models/blobs/sha256-2bada8a7450677000f678be90653b85d364de7db25eb5ea54136ada5f3933730
+time=2026-10-28T02:06:56.351+05:30 level=INFO source=llama_server.go:457 msg="starting llama-server" cmd="/Applications/Ollama.app/Contents/Resources/llama-server --model /Users/saket/.ollama/models/blobs/sha256-2bada8a7450677000f678be90653b85d364de7db25eb5ea54136ada5f3933730 --port 50616 --host 127.0.0.1 --no-webui --offline -c 32768 -np 1 --log-verbosity 4 --no-log-prefix --no-log-timestamps --no-jinja --chat-template chatml --flash-attn auto -b 512 -ub 512 --context-shift --keep 4"
+time=2026-10-28T02:06:56.354+05:30 level=INFO source=sched.go:658 msg="system memory" total="16.0 GiB" free="7.1 GiB" free_swap="0 B"
+time=2026-10-28T02:06:56.354+05:30 level=INFO source=sched.go:665 msg="gpu memory" id=0 library=Metal available="11.3 GiB" free="11.8 GiB" minimum="512.0 MiB" overhead="0 B"
+time=2026-10-28T02:06:56.354+05:30 level=INFO source=llama_server.go:1088 msg="loading model via llama-server" model=/Users/saket/.ollama/models/blobs/sha256-2bada8a7450677000f678be90653b85d364de7db25eb5ea54136ada5f3933730
+time=2026-10-28T02:06:56.354+05:30 level=INFO source=llama_server.go:1341 msg="waiting for llama-server to start responding"
+time=2026-10-28T02:06:56.354+05:30 level=INFO source=llama_server.go:1396 msg="waiting for llama-server to become available" status="llm server not responding"
+srv  llama_server: initializing ...
+ggml_metal_device_init: testing tensor API for f16 support
+ggml_metal_device_init: testing tensor API for bfloat support
+ggml_metal_library_init: using embedded metal library
+ggml_metal_library_compile_all: loaded 36 libraries from embedded data in 0.018 sec (max single = 0.017 sec)
+ggml_metal_rsets_init: creating a residency set collection (keep_alive = 180 s)
+ggml_metal_device_init: GPU name:   MTL0 (Apple M5)
+ggml_metal_device_init: GPU family: MTLGPUFamilyApple10  (1010)
+ggml_metal_device_init: GPU family: MTLGPUFamilyMetal4  (5002)
+ggml_metal_device_init: simdgroup reduction   = true
+ggml_metal_device_init: simdgroup matrix mul. = true
+ggml_metal_device_init: has unified memory    = true
+ggml_metal_device_init: has bfloat            = true
+ggml_metal_device_init: has tensor            = true
+ggml_metal_device_init: use residency sets    = true
+ggml_metal_device_init: use shared buffers    = true
+ggml_metal_device_init: recommendedMaxWorkingSetSize  = 12713.12 MB
+cmn  common_param: common_params_print_info: build 1 (9ff0d7e90) with AppleClang 21.0.0.21000099 for Darwin arm64
+cmn  common_param: common_params_print_info: verbosity = 4 (adjust with the `-lv N` CLI arg)
+cmn  common_param: device_info:
+cmn  common_param:   - MTL0    : Apple M5 (12124 MiB, 12123 MiB free)
+cmn  common_param:   - BLAS    : Accelerate (0 MiB, 0 MiB free)
+cmn  common_param:   - CPU     : Apple M5 (16384 MiB, 16384 MiB free)
+cmn  common_param: system_info: n_threads = 4 (n_threads_batch = 4) / 10 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | DOTPROD = 1 | LLAMAFILE = 1 | ACCELERATE = 1 | REPACK = 1 | 
+srv  init_listene: The UI is disabled
+srv  init_listene: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+srv          init: using 9 threads for HTTP server
+srv  llama_server: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)
+srv    load_model: loading model '/Users/saket/.ollama/models/blobs/sha256-2bada8a7450677000f678be90653b85d364de7db25eb5ea54136ada5f3933730'
+srv    load_model: local path '/Users/saket/.ollama/models/blobs/sha256-2bada8a7450677000f678be90653b85d364de7db25eb5ea54136ada5f3933730'
+cmn  common_init_: fitting params to device memory ...
+cmn  common_init_: (for bugs during this step try to reproduce them with -fit off, or provide --verbose logs if the bug only occurs with -fit on)
+common_params_fit_impl: getting device memory data for initial parameters:
+common_memory_breakdown_print: | memory breakdown [MiB] | total    free    self   model   context   compute    unaccounted |
+common_memory_breakdown_print: |   - MTL0 (Apple M5)    | 12124 = 12123 + (6131 =  4168 +    1792 +     171) +       -6130 |
+common_memory_breakdown_print: |   - Host               |                   412 =   292 +       0 +     120                |
+common_params_fit_impl: projected to use 6131 MiB of device memory vs. 12123 MiB of free device memory
+common_params_fit_impl: will leave 5992 >= 1024 MiB of free device memory, no changes needed
+common_fit_params: successfully fit params to free device memory
+common_fit_params: fitting params to free memory took 0.06 seconds
+llama_model_loader: loaded meta data with 34 key-value pairs and 339 tensors from /Users/saket/.ollama/models/blobs/sha256-2bada8a7450677000f678be90653b85d364de7db25eb5ea54136ada5f3933730 (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = qwen2
+llama_model_loader: - kv   1:                               general.type str              = model
+llama_model_loader: - kv   2:                               general.name str              = Qwen2.5 7B Instruct
+llama_model_loader: - kv   3:                           general.finetune str              = Instruct
+llama_model_loader: - kv   4:                           general.basename str              = Qwen2.5
+llama_model_loader: - kv   5:                         general.size_label str              = 7B
+llama_model_loader: - kv   6:                            general.license str              = apache-2.0
+llama_model_loader: - kv   7:                       general.license.link str              = https://huggingface.co/Qwen/Qwen2.5-7...
+llama_model_loader: - kv   8:                   general.base_model.count u32              = 1
+llama_model_loader: - kv   9:                  general.base_model.0.name str              = Qwen2.5 7B
+llama_model_loader: - kv  10:          general.base_model.0.organization str              = Qwen
+llama_model_loader: - kv  11:              general.base_model.0.repo_url str              = https://huggingface.co/Qwen/Qwen2.5-7B
+llama_model_loader: - kv  12:                               general.tags arr[str,2]       = ["chat", "text-generation"]
+llama_model_loader: - kv  13:                          general.languages arr[str,1]       = ["en"]
+llama_model_loader: - kv  14:                          qwen2.block_count u32              = 28
+llama_model_loader: - kv  15:                       qwen2.context_length u32              = 32768
+llama_model_loader: - kv  16:                     qwen2.embedding_length u32              = 3584
+llama_model_loader: - kv  17:                  qwen2.feed_forward_length u32              = 18944
+llama_model_loader: - kv  18:                 qwen2.attention.head_count u32              = 28
+llama_model_loader: - kv  19:              qwen2.attention.head_count_kv u32              = 4
+llama_model_loader: - kv  20:                       qwen2.rope.freq_base f32              = 1000000.000000
+llama_model_loader: - kv  21:     qwen2.attention.layer_norm_rms_epsilon f32              = 0.000001
+llama_model_loader: - kv  22:                          general.file_type u32              = 15
+llama_model_loader: - kv  23:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  24:                         tokenizer.ggml.pre str              = qwen2
+llama_model_loader: - kv  25:                      tokenizer.ggml.tokens arr[str,152064]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+llama_model_loader: - kv  26:                  tokenizer.ggml.token_type arr[i32,152064]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  27:                      tokenizer.ggml.merges arr[str,151387]  = ["Ġ Ġ", "ĠĠ ĠĠ", "i n", "Ġ t",...
+llama_model_loader: - kv  28:                tokenizer.ggml.eos_token_id u32              = 151645
+llama_model_loader: - kv  29:            tokenizer.ggml.padding_token_id u32              = 151643
+llama_model_loader: - kv  30:                tokenizer.ggml.bos_token_id u32              = 151643
+llama_model_loader: - kv  31:               tokenizer.ggml.add_bos_token bool             = false
+llama_model_loader: - kv  32:                    tokenizer.chat_template str              = {%- if tools %}\n    {{- '<|im_start|>...
+llama_model_loader: - kv  33:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:  141 tensors
+llama_model_loader: - type q4_K:  169 tensors
+llama_model_loader: - type q6_K:   29 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = Q4_K - Medium
+print_info: file size   = 4.36 GiB (4.91 BPW) 
+llama_prepare_model_devices: using device MTL0 (Apple M5) (unknown id) - 12123 MiB free
+load: 0 unused tokens
+load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+load: printing all EOG tokens:
+load:   - 128247 ('</s>')
+load:   - 151643 ('<|endoftext|>')
+load:   - 151645 ('<|im_end|>')
+load:   - 151662 ('<|fim_pad|>')
+load:   - 151663 ('<|repo_name|>')
+load:   - 151664 ('<|file_sep|>')
+load: special tokens cache size = 23
+load: token to piece cache size = 0.9310 MB
+print_info: arch                  = qwen2
+print_info: vocab_only            = 0
+print_info: no_alloc              = 0
+print_info: n_ctx_train           = 32768
+print_info: n_embd_inp            = 3584
+print_info: n_embd                = 3584
+print_info: n_embd_out            = 3584
+print_info: n_layer               = 28
+print_info: n_layer_all           = 28
+print_info: n_head                = 28
+print_info: n_head_kv             = 4
+print_info: n_rot                 = 128
+print_info: n_swa                 = 0
+print_info: is_swa_any            = 0
+print_info: non_causal_type       = 0
+print_info: n_embd_head_k         = 128
+print_info: n_embd_head_v         = 128
+print_info: n_gqa                 = 7
+print_info: n_embd_k_gqa          = 512
+print_info: n_embd_v_gqa          = 512
+print_info: f_norm_eps            = 0.0e+00
+print_info: f_norm_rms_eps        = 1.0e-06
+print_info: f_clamp_kqv           = 0.0e+00
+print_info: f_max_alibi_bias      = 0.0e+00
+print_info: f_logit_scale         = 0.0e+00
+print_info: f_attn_scale          = 0.0e+00
+print_info: f_attn_value_scale    = 0.0000
+print_info: n_ff                  = 18944
+print_info: n_expert              = 0
+print_info: n_expert_used         = 0
+print_info: n_expert_groups       = 0
+print_info: n_group_used          = 0
+print_info: causal attn           = 1
+print_info: pooling type          = -1
+print_info: rope type             = 2
+print_info: rope scaling          = linear
+print_info: freq_base_train       = 1000000.0
+print_info: freq_scale_train      = 1
+print_info: n_ctx_orig_yarn       = 32768
+print_info: rope_yarn_log_mul     = 0.0000
+print_info: rope_finetuned        = unknown
+print_info: model type            = 7B
+print_info: model params          = 7.62 B
+print_info: general.name          = Qwen2.5 7B Instruct
+print_info: vocab type            = BPE
+print_info: n_vocab               = 152064
+print_info: n_merges              = 151387
+print_info: BOS token             = 151643 '<|endoftext|>'
+print_info: EOS token             = 151645 '<|im_end|>'
+print_info: EOT token             = 151645 '<|im_end|>'
+print_info: PAD token             = 151643 '<|endoftext|>'
+print_info: LF token              = 198 'Ċ'
+print_info: FIM PRE token         = 151659 '<|fim_prefix|>'
+print_info: FIM SUF token         = 151661 '<|fim_suffix|>'
+print_info: FIM MID token         = 151660 '<|fim_middle|>'
+print_info: FIM PAD token         = 151662 '<|fim_pad|>'
+print_info: FIM REP token         = 151663 '<|repo_name|>'
+print_info: FIM SEP token         = 151664 '<|file_sep|>'
+print_info: EOG token             = 128247 '</s>'
+print_info: EOG token             = 151643 '<|endoftext|>'
+print_info: EOG token             = 151645 '<|im_end|>'
+print_info: EOG token             = 151662 '<|fim_pad|>'
+print_info: EOG token             = 151663 '<|repo_name|>'
+print_info: EOG token             = 151664 '<|file_sep|>'
+print_info: max token length      = 256
+load_tensors: loading model tensors, this can take a while... (load_mode = mmap)
+time=2026-10-28T02:06:56.606+05:30 level=INFO source=llama_server.go:1396 msg="waiting for llama-server to become available" status="llm server loading model"
+load_tensors: offloading output layer to GPU
+load_tensors: offloading 27 repeating layers to GPU
+load_tensors: offloaded 29/29 layers to GPU
+load_tensors:   CPU_Mapped model buffer size =   292.36 MiB
+load_tensors:  MTL0_Mapped model buffer size =  4168.09 MiB
+cmn  common_init_: added </s> logit bias = -inf
+cmn  common_init_: added <|endoftext|> logit bias = -inf
+cmn  common_init_: added <|im_end|> logit bias = -inf
+cmn  common_init_: added <|fim_pad|> logit bias = -inf
+cmn  common_init_: added <|repo_name|> logit bias = -inf
+cmn  common_init_: added <|file_sep|> logit bias = -inf
+llama_context: constructing llama_context
+llama_context: n_seq_max             = 1
+llama_context: n_ctx                 = 32768
+llama_context: n_ctx_seq             = 32768
+llama_context: n_batch               = 512
+llama_context: n_ubatch              = 512
+llama_context: causal_attn           = 1
+llama_context: flash_attn            = auto
+llama_context: kv_unified            = false
+llama_context: freq_base             = 1000000.0
+llama_context: freq_scale            = 1
+llama_context: n_rs_seq              = 0
+llama_context: n_outputs_max         = 1
+llama_context: n_outputs_max_per_seq = 1
+ggml_metal_init: allocating
+ggml_metal_init: found device: Apple M5
+ggml_metal_init: picking default device: Apple M5
+ggml_metal_init: use fusion         = true
+ggml_metal_init: use concurrency    = true
+ggml_metal_init: use graph optimize = true
+llama_context:        CPU  output buffer size =     0.58 MiB
+llama_kv_cache:       MTL0 KV buffer size =  1792.00 MiB
+llama_kv_cache: size = 1792.00 MiB ( 32768 cells,  28 layers,  1/1 seqs), K (f16):  896.00 MiB, V (f16):  896.00 MiB
+llama_kv_cache: n_rot_k = 0, n_embd_head_k_all = 128
+llama_kv_cache: n_rot_v = 0, n_embd_head_k_all = 128
+sched_reserve: reserving ...
+resolve_fused_ops: Flash Attention enabled
+resolve_fused_ops: resolving fused DeepSeek V4 HC support:
+resolve_fused_ops: fused DeepSeek V4 HC pre enabled
+resolve_fused_ops: fused DeepSeek V4 HC comb enabled
+resolve_fused_ops: fused DeepSeek V4 HC post enabled
+sched_reserve:       MTL0 compute buffer size =   171.01 MiB
+sched_reserve:        CPU compute buffer size =    60.02 MiB
+sched_reserve: graph: nodes = 961, splits = 2, input objects = 4, input tensors = 9
+sched_reserve: reserve took 19.25 ms, sched copies = 1
+cmn          init: llama threadpool init, n_threads = 4
+cmn  common_init_: warming up the model with an empty run - please wait ... (--no-warmup to disable)
+srv    load_model: initializing, n_slots = 1, n_ctx_slot = 32768, kv_unified = 'false'
+spec common_specu: no implementations specified for speculative decoding
+slot   load_model: id  0 | task -1 | new slot, n_ctx = 32768
+srv    load_model: prompt cache is enabled, size limit: 8192 MiB
+srv    load_model: use `--cache-ram 0` to disable the prompt cache
+srv    load_model: for more info see https://github.com/ggml-org/llama.cpp/pull/16391
+srv    load_model: context checkpoints enabled, max = 32, min spacing = 8192
+srv          init: idle slots will be saved to prompt cache upon starting a new task
+srv          init: init: chat template, example_format: '<|im_start|>system
+You are a helpful assistant<|im_end|>
+<|im_start|>user
+Hello<|im_end|>
+<|im_start|>assistant
+Hi there<|im_end|>
+<|im_start|>user
+How are you?<|im_end|>
+<|im_start|>assistant
+'
+srv          init: init: chat template, thinking = 0
+srv          init: preserve_reasoning kwarg: not supported by template
+srv  llama_server: model loaded
+srv  llama_server: listening on http://127.0.0.1:50616
+srv  update_slots: all slots are idle
+time=2026-10-28T02:06:57.610+05:30 level=INFO source=llama_server.go:1408 msg="llama-server started in 1.26 seconds"
+time=2026-10-28T02:06:57.610+05:30 level=INFO source=images.go:428 msg="template selection" model=registry.ollama.ai/library/qwen2.5:7b selected=go_template renderer="" parser="" go_template="[completion tools]" chat_template="[tools completion]" harmony=null renderer_parser=null
+time=2026-10-28T02:06:57.610+05:30 level=INFO source=sched.go:782 msg="loaded runners" count=1
+time=2026-10-28T02:06:57.610+05:30 level=INFO source=llama_server.go:1341 msg="waiting for llama-server to start responding"
+time=2026-10-28T02:06:57.611+05:30 level=INFO source=llama_server.go:1408 msg="llama-server started in 1.26 seconds"
+srv  server_strea: conv_id= (empty=1)
+slot get_availabl: id  0 | task -1 |  - skipping, slot is empty
+slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = -1
+srv  get_availabl: updating prompt cache
+srv          load:  - looking for better prompt, base f_keep = -1.000, f_sim = 0.000
+srv        update:  - cache state: 0 prompts, 0.000 MiB (limits: 8192.000 MiB, 32768 tokens, 8589934592 est)
+srv  get_availabl: prompt cache update took 0.01 ms
+slot launch_slot_: id  0 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> greedy 
+slot launch_slot_: id  0 | task -1 | sampler params: 
+	repeat_last_n = 64, repeat_penalty = 1.000, frequency_penalty = 0.000, presence_penalty = 0.000
+	dry_multiplier = 0.000, dry_base = 1.750, dry_allowed_length = 2, dry_penalty_last_n = 64
+	top_k = 40, top_p = 0.900, min_p = 0.000, xtc_probability = 0.000, xtc_threshold = 0.100, typical_p = 1.000, top_n_sigma = -1.000, temp = 0.000
+	mirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900
+slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+slot   operator(): id  0 | task 0 | new prompt, n_ctx_slot = 32768, n_keep = 4, task.n_tokens = 1020
+slot   operator(): id  0 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot   operator(): id  0 | task 0 | cached n_tokens = 512, memory_seq_rm [512, end)
+slot init_sampler: id  0 | task 0 | init sampler, took 0.21 ms, tokens: text = 1020, total = 1020
+slot print_timing: id  0 | task 0 | prompt eval time =    1931.06 ms /  1020 tokens (    1.89 ms per token,   528.21 tokens per second)
+slot print_timing: id  0 | task 0 |        eval time =    2150.28 ms /    60 tokens (   36.45 ms per token,    27.44 tokens per second)
+slot print_timing: id  0 | task 0 |       total time =    4081.34 ms /  1080 tokens
+slot print_timing: id  0 | task 0 |    graphs reused =         58
+slot print_timing: id  0 | task 0 |   graph reallocs =          0    /     0        (same size) / (changed size)
+slot      release: id  0 | task 0 | stop processing: n_tokens = 1079, truncated = 0
+srv  update_slots: all slots are idle
+[GIN] 2026/10/28 - 02:07:01 | 200 |     5.4s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2026/10/28 - 02:07:01 | 204 |  3.416µs |       127.0.0.1 | OPTIONS  "/api/chat"
+srv  server_strea: conv_id= (empty=1)
+slot get_availabl: id  0 | task -1 |  - checking sim = 0.002 (4/1847) > 0.100
+slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 1079, t_last = 56632129720
+srv  get_availabl: updating prompt cache
+srv   prompt_save:  - saving prompt with length 1079, total state size = 59.021 MiB (draft: 0.000 MiB)
+srv          load:  - looking for better prompt, base f_keep = 0.004, f_sim = 0.002
+srv          load:    - prompt with length    1079, lcp =       4, f_keep = 0.004, f_sim = 0.002
+srv        update:  - cache state: 1 prompts, 59.021 MiB (limits: 8192.000 MiB, 32768 tokens, 149763 est)
+srv        update:    - prompt 0x7cb007f30:    1079 tokens, checkpoints:  0,    59.021 MiB
+srv  get_availabl: prompt cache update took 11.93 ms
+slot launch_slot_: id  0 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> greedy 
+slot launch_slot_: id  0 | task -1 | sampler params: 
+	repeat_last_n = 64, repeat_penalty = 1.000, frequency_penalty = 0.000, presence_penalty = 0.000
+	dry_multiplier = 0.000, dry_base = 1.750, dry_allowed_length = 2, dry_penalty_last_n = 64
+	top_k = 40, top_p = 0.900, min_p = 0.000, xtc_probability = 0.000, xtc_threshold = 0.100, typical_p = 1.000, top_n_sigma = -1.000, temp = 0.000
+	mirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900
+slot launch_slot_: id  0 | task 62 | processing task, is_child = 0
+slot   operator(): id  0 | task 62 | new prompt, n_ctx_slot = 32768, n_keep = 4, task.n_tokens = 1847
+slot   operator(): id  0 | task 62 | cached n_tokens = 4, memory_seq_rm [4, end)
+slot   operator(): id  0 | task 62 | cached n_tokens = 516, memory_seq_rm [516, end)
+slot   operator(): id  0 | task 62 | cached n_tokens = 1028, memory_seq_rm [1028, end)
+slot   operator(): id  0 | task 62 | cached n_tokens = 1540, memory_seq_rm [1540, end)
+slot init_sampler: id  0 | task 62 | init sampler, took 0.15 ms, tokens: text = 1847, total = 1847
+slot print_timing: id  0 | task 62 | prompt eval time =    3593.73 ms /  1843 tokens (    1.95 ms per token,   512.84 tokens per second)
+slot print_timing: id  0 | task 62 |        eval time =    2722.17 ms /    74 tokens (   37.29 ms per token,    26.82 tokens per second)
+slot print_timing: id  0 | task 62 |       total time =    6315.90 ms /  1917 tokens
+slot print_timing: id  0 | task 62 |    graphs reused =        130
+slot print_timing: id  0 | task 62 |   graph reallocs =          0    /     0        (same size) / (changed size)
+slot      release: id  0 | task 62 | stop processing: n_tokens = 1920, truncated = 0
+srv  update_slots: all slots are idle
+[GIN] 2026/10/28 - 02:07:08 | 200 |    6.33s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2026/10/28 - 02:08:29 | 204 | 23.916µs |       127.0.0.1 | OPTIONS  "/api/chat"
+[GIN] 2026/10/28 - 02:08:29 | 404 |   3.12ms |       127.0.0.1 | POST     "/api/chat"
+time=2026-10-28T02:08:45.453+05:30 level=INFO source=download.go:182 msg="downloading 9a42417378dd in 12 100 MB part(s)"
+time=2026-10-28T02:09:50.518+05:30 level=INFO source=download.go:182 msg="downloading 7339fa418c9a in 1 11 KB part(s)"
+time=2026-10-28T02:09:51.578+05:30 level=INFO source=download.go:182 msg="downloading f6417cb1e269 in 1 42 B part(s)"
+[GIN] 2026/10/28 - 02:09:54 | 200 |    6m30s |       127.0.0.1 | POST     "/api/pull"
+[GIN] 2026/10/28 - 02:10:13 | 204 | 548.666µs |       127.0.0.1 | OPTIONS  "/api/chat"
+time=2026-10-28T02:10:13.141+05:30 level=INFO source=sched.go:1372 msg="updated VRAM based on existing loaded models" gpu=0 library=Metal total="11.8 GiB" available="5.9 GiB"
+time=2026-10-28T02:10:13.162+05:30 level=INFO source=sched.go:596 msg="llama-server model predicted to exceed available memory, evicting" predicted="5.2 GiB" predicted_num_ctx=4096 num_batch=512 available="2.5 GiB" gpu_free="5.9 GiB" system_free="2.5 GiB" system_limited=true
+time=2026-10-28T02:10:13.208+05:30 level=INFO source=sched.go:1183 msg="disabling mmap for llama-server load by default" model=/Users/saket/.ollama/models/blobs/sha256-9c3e4853af40205c11b5d1000dfcf08e96454adfd872e48b934cd67d59ec3097 reason=metal_partial_offload
+time=2026-10-28T02:10:13.209+05:30 level=INFO source=server.go:107 msg="using llama-server for model" model=/Users/saket/.ollama/models/blobs/sha256-9c3e4853af40205c11b5d1000dfcf08e96454adfd872e48b934cd67d59ec3097
+time=2026-10-28T02:10:13.210+05:30 level=INFO source=llama_server.go:457 msg="starting llama-server" cmd="/Applications/Ollama.app/Contents/Resources/llama-server --model /Users/saket/.ollama/models/blobs/sha256-9c3e4853af40205c11b5d1000dfcf08e96454adfd872e48b934cd67d59ec3097 --port 50658 --host 127.0.0.1 --no-webui --offline -c 4096 -np 1 --log-verbosity 4 --no-log-prefix --no-log-timestamps --no-jinja --chat-template chatml --mmproj /Users/saket/.ollama/models/blobs/sha256-9a42417378dd18094b163f529239c42636ef487932f220d8763ab923e6a8a3cb --image-min-tokens 1024 --load-mode none --flash-attn auto -b 512 -ub 512 --context-shift --keep 4"
+time=2026-10-28T02:10:13.213+05:30 level=INFO source=sched.go:658 msg="system memory" total="16.0 GiB" free="2.6 GiB" free_swap="0 B"
+time=2026-10-28T02:10:13.213+05:30 level=INFO source=sched.go:665 msg="gpu memory" id=0 library=Metal available="11.3 GiB" free="11.8 GiB" minimum="512.0 MiB" overhead="0 B"
+time=2026-10-28T02:10:13.213+05:30 level=INFO source=llama_server.go:1088 msg="loading model via llama-server" model=/Users/saket/.ollama/models/blobs/sha256-9c3e4853af40205c11b5d1000dfcf08e96454adfd872e48b934cd67d59ec3097
+time=2026-10-28T02:10:13.213+05:30 level=INFO source=llama_server.go:1341 msg="waiting for llama-server to start responding"
+time=2026-10-28T02:10:13.213+05:30 level=INFO source=llama_server.go:1396 msg="waiting for llama-server to become available" status="llm server not responding"
+srv  llama_server: initializing ...
+ggml_metal_device_init: testing tensor API for f16 support
+ggml_metal_device_init: testing tensor API for bfloat support
+ggml_metal_library_init: using embedded metal library
+ggml_metal_library_compile_all: loaded 36 libraries from embedded data in 0.041 sec (max single = 0.041 sec)
+ggml_metal_rsets_init: creating a residency set collection (keep_alive = 180 s)
+ggml_metal_device_init: GPU name:   MTL0 (Apple M5)
+ggml_metal_device_init: GPU family: MTLGPUFamilyApple10  (1010)
+ggml_metal_device_init: GPU family: MTLGPUFamilyMetal4  (5002)
+ggml_metal_device_init: simdgroup reduction   = true
+ggml_metal_device_init: simdgroup matrix mul. = true
+ggml_metal_device_init: has unified memory    = true
+ggml_metal_device_init: has bfloat            = true
+ggml_metal_device_init: has tensor            = true
+ggml_metal_device_init: use residency sets    = true
+ggml_metal_device_init: use shared buffers    = true
+ggml_metal_device_init: recommendedMaxWorkingSetSize  = 12713.12 MB
+cmn  common_param: common_params_print_info: build 1 (9ff0d7e90) with AppleClang 21.0.0.21000099 for Darwin arm64
+cmn  common_param: common_params_print_info: verbosity = 4 (adjust with the `-lv N` CLI arg)
+cmn  common_param: device_info:
+cmn  common_param:   - MTL0    : Apple M5 (12124 MiB, 12123 MiB free)
+cmn  common_param:   - BLAS    : Accelerate (0 MiB, 0 MiB free)
+cmn  common_param:   - CPU     : Apple M5 (16384 MiB, 16384 MiB free)
+cmn  common_param: system_info: n_threads = 4 (n_threads_batch = 4) / 10 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | DOTPROD = 1 | LLAMAFILE = 1 | ACCELERATE = 1 | REPACK = 1 | 
+srv  init_listene: The UI is disabled
+srv  init_listene: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+srv          init: using 9 threads for HTTP server
+srv  llama_server: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)
+clip_model_loader: model name:   
+clip_model_loader: description:  
+clip_model_loader: GGUF version: 3
+clip_model_loader: alignment:    32
+clip_model_loader: n_tensors:    352
+clip_model_loader: n_kv:         21
+
+clip_model_loader: has vision encoder
+srv    load_model: loading model '/Users/saket/.ollama/models/blobs/sha256-9c3e4853af40205c11b5d1000dfcf08e96454adfd872e48b934cd67d59ec3097'
+srv    load_model: local path '/Users/saket/.ollama/models/blobs/sha256-9c3e4853af40205c11b5d1000dfcf08e96454adfd872e48b934cd67d59ec3097'
+ggml_metal_init: allocating
+ggml_metal_init: found device: Apple M5
+ggml_metal_init: picking default device: Apple M5
+ggml_metal_init: use fusion         = true
+ggml_metal_init: use concurrency    = true
+ggml_metal_init: use graph optimize = true
+ggml_metal_free: deallocating
+srv    load_model: [mtmd] estimated worst-case memory usage of mmproj is 1637.17 MiB (took 39.90 ms)
+cmn  common_init_: fitting params to device memory ...
+cmn  common_init_: (for bugs during this step try to reproduce them with -fit off, or provide --verbose logs if the bug only occurs with -fit on)
+common_params_fit_impl: getting device memory data for initial parameters:
+common_memory_breakdown_print: | memory breakdown [MiB] | total    free    self   model   context   compute    unaccounted |
+common_memory_breakdown_print: |   - MTL0 (Apple M5)    | 12124 = 12123 + (5221 =  4455 +     576 +     190) +       -5220 |
+common_memory_breakdown_print: |   - Host               |                   501 =   333 +       0 +     168                |
+common_params_fit_impl: projected to use 5221 MiB of device memory vs. 12123 MiB of free device memory
+common_params_fit_impl: will leave 6901 >= 3745 MiB of free device memory, no changes needed
+common_fit_params: successfully fit params to free device memory
+common_fit_params: fitting params to free memory took 0.06 seconds
+llama_model_loader: loaded meta data with 27 key-value pairs and 399 tensors from /Users/saket/.ollama/models/blobs/sha256-9c3e4853af40205c11b5d1000dfcf08e96454adfd872e48b934cd67d59ec3097 (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:               qwen3vl.attention.head_count u32              = 32
+llama_model_loader: - kv   1:            qwen3vl.attention.head_count_kv u32              = 8
+llama_model_loader: - kv   2:               qwen3vl.attention.key_length u32              = 128
+llama_model_loader: - kv   3:   qwen3vl.attention.layer_norm_rms_epsilon f32              = 0.000001
+llama_model_loader: - kv   4:             qwen3vl.attention.value_length u32              = 128
+llama_model_loader: - kv   5:                        qwen3vl.block_count u32              = 36
+llama_model_loader: - kv   6:                     qwen3vl.context_length u32              = 262144
+llama_model_loader: - kv   7:                   qwen3vl.embedding_length u32              = 4096
+llama_model_loader: - kv   8:                qwen3vl.feed_forward_length u32              = 12288
+llama_model_loader: - kv   9:                       general.architecture str              = qwen3vl
+llama_model_loader: - kv  10:                 qwen3vl.n_deepstack_layers u32              = 3
+llama_model_loader: - kv  11:            qwen3vl.rope.dimension_sections arr[i32,4]       = [24, 20, 20, 0]
+llama_model_loader: - kv  12:                     qwen3vl.rope.freq_base f32              = 5000000.000000
+llama_model_loader: - kv  13:                    tokenizer.chat_template str              = {%- set image_count = namespace(value...
+llama_model_loader: - kv  14:               tokenizer.ggml.add_eos_token bool             = false
+llama_model_loader: - kv  15:           tokenizer.ggml.add_padding_token bool             = false
+llama_model_loader: - kv  16:                tokenizer.ggml.eos_token_id u32              = 151645
+llama_model_loader: - kv  17:               tokenizer.ggml.eos_token_ids arr[i32,2]       = [151645, 151643]
+llama_model_loader: - kv  18:                      tokenizer.ggml.merges arr[str,151387]  = ["Ġ Ġ", "ĠĠ ĠĠ", "i n", "Ġ t",...
+llama_model_loader: - kv  19:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  20:            tokenizer.ggml.padding_token_id u32              = 151643
+llama_model_loader: - kv  21:                         tokenizer.ggml.pre str              = qwen2
+llama_model_loader: - kv  22:                      tokenizer.ggml.scores arr[f32,151936]  = [0.000000, 1.000000, 2.000000, 3.0000...
+llama_model_loader: - kv  23:                  tokenizer.ggml.token_type arr[i32,151936]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  24:                      tokenizer.ggml.tokens arr[str,151936]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+llama_model_loader: - kv  25:               general.quantization_version u32              = 2
+llama_model_loader: - kv  26:                          general.file_type u32              = 15
+llama_model_loader: - type  f32:  145 tensors
+llama_model_loader: - type q4_K:  217 tensors
+llama_model_loader: - type q6_K:   37 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = Q4_K - Medium
+print_info: file size   = 4.68 GiB (4.90 BPW) 
+llama_prepare_model_devices: using device MTL0 (Apple M5) (unknown id) - 12123 MiB free
+load: control-looking token: 151664 '<|file_sep|>' was not control-type; this is probably a bug in the model. its type will be overridden
+load: control-looking token: 151663 '<|repo_name|>' was not control-type; this is probably a bug in the model. its type will be overridden
+load: control-looking token: 151662 '<|fim_pad|>' was not control-type; this is probably a bug in the model. its type will be overridden
+load: control-looking token: 151659 '<|fim_prefix|>' was not control-type; this is probably a bug in the model. its type will be overridden
+load: control-looking token: 151660 '<|fim_middle|>' was not control-type; this is probably a bug in the model. its type will be overridden
+time=2026-10-28T02:10:13.464+05:30 level=INFO source=llama_server.go:1396 msg="waiting for llama-server to become available" status="llm server loading model"
+load: control-looking token: 151661 '<|fim_suffix|>' was not control-type; this is probably a bug in the model. its type will be overridden
+load: 0 unused tokens
+load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+load: printing all EOG tokens:
+load:   - 128247 ('</s>')
+load:   - 151643 ('<|endoftext|>')
+load:   - 151645 ('<|im_end|>')
+load:   - 151662 ('<|fim_pad|>')
+load:   - 151663 ('<|repo_name|>')
+load:   - 151664 ('<|file_sep|>')
+load: special tokens cache size = 294
+load: token to piece cache size = 0.9330 MB
+print_info: arch                  = qwen3vl
+print_info: vocab_only            = 0
+print_info: no_alloc              = 0
+print_info: n_ctx_train           = 262144
+print_info: n_embd_inp            = 16384
+print_info: n_embd                = 4096
+print_info: n_embd_out            = 4096
+print_info: n_layer               = 36
+print_info: n_layer_all           = 36
+print_info: n_head                = 32
+print_info: n_head_kv             = 8
+print_info: n_rot                 = 128
+print_info: n_swa                 = 0
+print_info: is_swa_any            = 0
+print_info: non_causal_type       = 0
+print_info: n_embd_head_k         = 128
+print_info: n_embd_head_v         = 128
+print_info: n_gqa                 = 4
+print_info: n_embd_k_gqa          = 1024
+print_info: n_embd_v_gqa          = 1024
+print_info: f_norm_eps            = 0.0e+00
+print_info: f_norm_rms_eps        = 1.0e-06
+print_info: f_clamp_kqv           = 0.0e+00
+print_info: f_max_alibi_bias      = 0.0e+00
+print_info: f_logit_scale         = 0.0e+00
+print_info: f_attn_scale          = 0.0e+00
+print_info: f_attn_value_scale    = 0.0000
+print_info: n_ff                  = 12288
+print_info: n_expert              = 0
+print_info: n_expert_used         = 0
+print_info: n_expert_groups       = 0
+print_info: n_group_used          = 0
+print_info: causal attn           = 1
+print_info: pooling type          = -1
+print_info: rope type             = 40
+print_info: rope scaling          = linear
+print_info: freq_base_train       = 5000000.0
+print_info: freq_scale_train      = 1
+print_info: n_ctx_orig_yarn       = 262144
+print_info: rope_yarn_log_mul     = 0.0000
+print_info: rope_finetuned        = unknown
+print_info: mrope sections        = [24, 20, 20, 0]
+print_info: model type            = 8B
+print_info: model params          = 8.19 B
+print_info: general.name          = n/a
+print_info: vocab type            = BPE
+print_info: n_vocab               = 151936
+print_info: n_merges              = 151387
+print_info: BOS token             = 11 ','
+print_info: EOS token             = 151645 '<|im_end|>'
+print_info: EOT token             = 151645 '<|im_end|>'
+print_info: PAD token             = 151643 '<|endoftext|>'
+print_info: LF token              = 198 'Ċ'
+print_info: FIM PRE token         = 151659 '<|fim_prefix|>'
+print_info: FIM SUF token         = 151661 '<|fim_suffix|>'
+print_info: FIM MID token         = 151660 '<|fim_middle|>'
+print_info: FIM PAD token         = 151662 '<|fim_pad|>'
+print_info: FIM REP token         = 151663 '<|repo_name|>'
+print_info: FIM SEP token         = 151664 '<|file_sep|>'
+print_info: EOG token             = 128247 '</s>'
+print_info: EOG token             = 151643 '<|endoftext|>'
+print_info: EOG token             = 151645 '<|im_end|>'
+print_info: EOG token             = 151662 '<|fim_pad|>'
+print_info: EOG token             = 151663 '<|repo_name|>'
+print_info: EOG token             = 151664 '<|file_sep|>'
+print_info: max token length      = 256
+load_tensors: loading model tensors, this can take a while... (load_mode = none)
+load_tensors: offloading output layer to GPU
+load_tensors: offloading 35 repeating layers to GPU
+load_tensors: offloaded 37/37 layers to GPU
+load_tensors:          CPU model buffer size =   333.84 MiB
+load_tensors:         MTL0 model buffer size =  4455.34 MiB
+cmn  common_init_: added </s> logit bias = -inf
+cmn  common_init_: added <|endoftext|> logit bias = -inf
+cmn  common_init_: added <|im_end|> logit bias = -inf
+cmn  common_init_: added <|fim_pad|> logit bias = -inf
+cmn  common_init_: added <|repo_name|> logit bias = -inf
+cmn  common_init_: added <|file_sep|> logit bias = -inf
+llama_context: constructing llama_context
+llama_context: n_seq_max             = 1
+llama_context: n_ctx                 = 4096
+llama_context: n_ctx_seq             = 4096
+llama_context: n_batch               = 512
+llama_context: n_ubatch              = 512
+llama_context: causal_attn           = 1
+llama_context: flash_attn            = auto
+llama_context: kv_unified            = false
+llama_context: freq_base             = 5000000.0
+llama_context: freq_scale            = 1
+llama_context: n_rs_seq              = 0
+llama_context: n_outputs_max         = 1
+llama_context: n_outputs_max_per_seq = 1
+llama_context: n_ctx_seq (4096) < n_ctx_train (262144) -- the full capacity of the model will not be utilized
+ggml_metal_init: allocating
+ggml_metal_init: found device: Apple M5
+ggml_metal_init: picking default device: Apple M5
+ggml_metal_init: use fusion         = true
+ggml_metal_init: use concurrency    = true
+ggml_metal_init: use graph optimize = true
+llama_context:        CPU  output buffer size =     0.58 MiB
+llama_kv_cache:       MTL0 KV buffer size =   576.00 MiB
+llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB
+llama_kv_cache: n_rot_k = 0, n_embd_head_k_all = 128
+llama_kv_cache: n_rot_v = 0, n_embd_head_k_all = 128
+sched_reserve: reserving ...
+resolve_fused_ops: Flash Attention enabled
+resolve_fused_ops: resolving fused DeepSeek V4 HC support:
+resolve_fused_ops: fused DeepSeek V4 HC pre enabled
+resolve_fused_ops: fused DeepSeek V4 HC comb enabled
+resolve_fused_ops: fused DeepSeek V4 HC post enabled
+sched_reserve:       MTL0 compute buffer size =   190.34 MiB
+sched_reserve:        CPU compute buffer size =    84.02 MiB
+sched_reserve: graph: nodes = 1278, splits = 2, input objects = 4, input tensors = 9
+sched_reserve: reserve took 13.20 ms, sched copies = 1
+cmn          init: llama threadpool init, n_threads = 4
+cmn  common_init_: KV cache shifting is not supported for this context, disabling KV cache shifting
+cmn  common_init_: warming up the model with an empty run - please wait ... (--no-warmup to disable)
+clip_model_loader: model name:   
+clip_model_loader: description:  
+clip_model_loader: GGUF version: 3
+clip_model_loader: alignment:    32
+clip_model_loader: n_tensors:    352
+clip_model_loader: n_kv:         21
+
+clip_model_loader: has vision encoder
+ggml_metal_init: allocating
+ggml_metal_init: found device: Apple M5
+ggml_metal_init: picking default device: Apple M5
+ggml_metal_init: use fusion         = true
+ggml_metal_init: use concurrency    = true
+ggml_metal_init: use graph optimize = true
+clip_ctx: CLIP using MTL0 backend
+load_hparams: projector:          qwen3vl_merger
+load_hparams: n_embd:             1152
+load_hparams: n_head:             16
+load_hparams: n_ff:               4304
+load_hparams: n_layer:            27
+load_hparams: ffn_op:             gelu
+load_hparams: projection_dim:     4096
+
+--- vision hparams ---
+load_hparams: image_size:         768
+load_hparams: patch_size:         16
+load_hparams: has_llava_proj:     0
+load_hparams: minicpmv_version:   0
+load_hparams: n_merge:            2
+load_hparams: n_wa_pattern: 0
+load_hparams: image_min_pixels:   1048576 (custom value)
+load_hparams: image_max_pixels:   4194304
+
+load_hparams: model size:         1108.69 MiB
+load_hparams: metadata size:      0.12 MiB
+get_dummy_batch: warmup with image size = 1472 x 1472
+get_dummy_batch: warmup with image size = 1472 x 1472
+reserve_compute_meta:       MTL0 compute buffer size =   503.56 MiB
+reserve_compute_meta:        CPU compute buffer size =    24.93 MiB
+reserve_compute_meta: graph splits = 1, nodes = 853
+warmup: flash attention is enabled
+srv    load_model: loaded multimodal model, '/Users/saket/.ollama/models/blobs/sha256-9a42417378dd18094b163f529239c42636ef487932f220d8763ab923e6a8a3cb'
+srv    load_model: initializing, n_slots = 1, n_ctx_slot = 4096, kv_unified = 'false'
+spec common_specu: no implementations specified for speculative decoding
+slot   load_model: id  0 | task -1 | new slot, n_ctx = 4096
+srv    load_model: prompt cache is enabled, size limit: 8192 MiB
+srv    load_model: use `--cache-ram 0` to disable the prompt cache
+srv    load_model: for more info see https://github.com/ggml-org/llama.cpp/pull/16391
+srv    load_model: context checkpoints enabled, max = 32, min spacing = 8192
+srv          init: idle slots will be saved to prompt cache upon starting a new task
+srv          init: init: chat template, example_format: '<|im_start|>system
+You are a helpful assistant<|im_end|>
+<|im_start|>user
+Hello<|im_end|>
+<|im_start|>assistant
+Hi there<|im_end|>
+<|im_start|>user
+How are you?<|im_end|>
+<|im_start|>assistant
+'
+srv          init: init: chat template, thinking = 0
+srv          init: preserve_reasoning kwarg: not supported by template
+srv  llama_server: model loaded
+srv  llama_server: listening on http://127.0.0.1:50658
+srv  update_slots: all slots are idle
+time=2026-10-28T02:10:15.995+05:30 level=INFO source=llama_server.go:1408 msg="llama-server started in 2.78 seconds"
+time=2026-10-28T02:10:15.998+05:30 level=INFO source=images.go:428 msg="template selection" model=registry.ollama.ai/library/qwen3-vl:8b selected=renderer_parser renderer=qwen3-vl-thinking parser=qwen3-vl-thinking go_template=null chat_template="[tools thinking completion vision]" harmony=null renderer_parser="[completion vision tools thinking]"
+time=2026-10-28T02:10:16.000+05:30 level=INFO source=sched.go:782 msg="loaded runners" count=1
+time=2026-10-28T02:10:16.001+05:30 level=INFO source=llama_server.go:1341 msg="waiting for llama-server to start responding"
+time=2026-10-28T02:10:16.002+05:30 level=INFO source=llama_server.go:1408 msg="llama-server started in 2.79 seconds"
+srv  server_strea: conv_id= (empty=1)
+slot get_availabl: id  0 | task -1 |  - skipping, slot is empty
+slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = -1
+srv  get_availabl: updating prompt cache
+srv          load:  - looking for better prompt, base f_keep = -1.000, f_sim = 0.000
+srv        update:  - cache state: 0 prompts, 0.000 MiB (limits: 8192.000 MiB, 4096 tokens, 8589934592 est)
+srv  get_availabl: prompt cache update took 0.01 ms
+slot launch_slot_: id  0 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> greedy 
+slot launch_slot_: id  0 | task -1 | sampler params: 
+	repeat_last_n = 64, repeat_penalty = 1.000, frequency_penalty = 0.000, presence_penalty = 0.000
+	dry_multiplier = 0.000, dry_base = 1.750, dry_allowed_length = 2, dry_penalty_last_n = 64
+	top_k = 20, top_p = 0.950, min_p = 0.000, xtc_probability = 0.000, xtc_threshold = 0.100, typical_p = 1.000, top_n_sigma = -1.000, temp = 0.000
+	mirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900
+slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+slot   operator(): id  0 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 1411
+slot   operator(): id  0 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot   operator(): id  0 | task 0 | cached n_tokens = 332, memory_seq_rm [332, end)
+slot encode_mtmd_: id  0 | task 0 | encoding mtmd batch from idx = 332, n_chunks = 1
+decoding image batch 1/3, n_tokens_batch = 512
+image decoded (batch 1/3) in 29 ms
+decoding image batch 2/3, n_tokens_batch = 512
+sched_graph_realloc: graph reallocation: nodes = 1520 (changed = 0), splits = 2, n_same = 1, n_diff = 0
+image decoded (batch 2/3) in 987 ms
+decoding image batch 3/3, n_tokens_batch = 12
+image decoded (batch 3/3) in 968 ms
+slot init_sampler: id  0 | task 0 | init sampler, took 0.03 ms, tokens: text = 375, total = 1411
+slot print_timing: id  0 | task 0 | n_gen =    100, tg =  24.42 t/s, tg_3s =  24.67 t/s
+slot print_timing: id  0 | task 0 | n_gen =    173, tg =  24.25 t/s, tg_3s =  24.03 t/s
+slot print_timing: id  0 | task 0 | n_gen =    246, tg =  24.22 t/s, tg_3s =  24.15 t/s
+slot print_timing: id  0 | task 0 | n_gen =    318, tg =  24.13 t/s, tg_3s =  23.81 t/s
+slot print_timing: id  0 | task 0 | n_gen =    390, tg =  24.05 t/s, tg_3s =  23.74 t/s
+slot print_timing: id  0 | task 0 | prompt eval time =    4980.09 ms /  1411 tokens (    3.53 ms per token,   283.33 tokens per second)
+slot print_timing: id  0 | task 0 |        eval time =   16588.12 ms /   400 tokens (   41.57 ms per token,    24.05 tokens per second)
+slot print_timing: id  0 | task 0 |       total time =   21568.20 ms /  1811 tokens
+slot print_timing: id  0 | task 0 |    graphs reused =        397
+slot print_timing: id  0 | task 0 |   graph reallocs =          1    /     0        (same size) / (changed size)
+slot      release: id  0 | task 0 | stop processing: n_tokens = 1810, truncated = 0
+srv  update_slots: all slots are idle
+[GIN] 2026/10/28 - 02:10:37 | 200 |   24.52s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2026/10/28 - 02:16:29 | 204 | 203.292µs |       127.0.0.1 | OPTIONS  "/api/chat"
+srv  server_strea: conv_id= (empty=1)
+slot get_availabl: id  0 | task -1 |  - checking sim = 0.236 (332/1409) > 0.100
+slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.236 (> 0.100 thold), f_keep = 0.183
+srv  get_availabl: updating prompt cache
+srv   prompt_save:  - saving prompt with length 1810, total state size = 254.574 MiB (draft: 0.000 MiB)
+srv          load:  - looking for better prompt, base f_keep = 0.183, f_sim = 0.236
+srv          load:    - prompt with length    1810, lcp =     332, f_keep = 0.183, f_sim = 0.236
+srv        update:  - cache state: 1 prompts, 254.574 MiB (limits: 8192.000 MiB, 4096 tokens, 58244 est)
+srv        update:    - prompt 0x853005550:    1810 tokens, checkpoints:  0,   254.574 MiB
+srv  get_availabl: prompt cache update took 75.09 ms
+slot launch_slot_: id  0 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> greedy 
+slot launch_slot_: id  0 | task -1 | sampler params: 
+	repeat_last_n = 64, repeat_penalty = 1.000, frequency_penalty = 0.000, presence_penalty = 0.000
+	dry_multiplier = 0.000, dry_base = 1.750, dry_allowed_length = 2, dry_penalty_last_n = 64
+	top_k = 20, top_p = 0.950, min_p = 0.000, xtc_probability = 0.000, xtc_threshold = 0.100, typical_p = 1.000, top_n_sigma = -1.000, temp = 0.000
+	mirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900
+slot launch_slot_: id  0 | task 402 | processing task, is_child = 0
+slot   operator(): id  0 | task 402 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 1409
+slot   operator(): id  0 | task 402 | cached n_tokens = 332, memory_seq_rm [332, end)
+slot encode_mtmd_: id  0 | task 402 | encoding mtmd batch from idx = 332, n_chunks = 1
+decoding image batch 1/3, n_tokens_batch = 512
+image decoded (batch 1/3) in 129 ms
+decoding image batch 2/3, n_tokens_batch = 512
+sched_graph_realloc: graph reallocation: nodes = 1520 (changed = 0), splits = 2, n_same = 2, n_diff = 0
+image decoded (batch 2/3) in 980 ms
+decoding image batch 3/3, n_tokens_batch = 12
+image decoded (batch 3/3) in 971 ms
+slot init_sampler: id  0 | task 402 | init sampler, took 0.03 ms, tokens: text = 373, total = 1409
+slot print_timing: id  0 | task 402 | n_gen =    100, tg =  24.29 t/s, tg_3s =  24.53 t/s
+slot print_timing: id  0 | task 402 | n_gen =    173, tg =  24.24 t/s, tg_3s =  24.18 t/s
+slot print_timing: id  0 | task 402 | prompt eval time =    4641.59 ms /  1077 tokens (    4.31 ms per token,   232.03 tokens per second)
+slot print_timing: id  0 | task 402 |        eval time =    9760.47 ms /   238 tokens (   41.18 ms per token,    24.28 tokens per second)
+slot print_timing: id  0 | task 402 |       total time =   14402.06 ms /  1315 tokens
+slot print_timing: id  0 | task 402 |    graphs reused =        632
+slot print_timing: id  0 | task 402 |   graph reallocs =          2    /     0        (same size) / (changed size)
+slot      release: id  0 | task 402 | stop processing: n_tokens = 1646, truncated = 0
+srv  update_slots: all slots are idle
+[GIN] 2026/10/28 - 02:16:43 | 200 |   14.54s |       127.0.0.1 | POST     "/api/chat"
+srv    operator(): operator(): cleaning up before exit...

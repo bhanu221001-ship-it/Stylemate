@@ -1,0 +1,20 @@
+StyleMate log sink
+  serving   /Users/saket/Downloads/agentcicd2c
+  logs      /Users/saket/Downloads/agentcicd2c/logs/
+  listening http://localhost:8765/  (127.0.0.1 only)
+    http://localhost:8765/stylemate_ollama.html
+    http://localhost:8765/stylemate_v10.html
+    http://localhost:8765/stylemate_v10_featurebar_mysize_ollama_v5.html
+    http://localhost:8765/stylemate_v10_featurebar_mysize_ollama_v6.html
+    http://localhost:8765/stylemate_v8_featurebar_mysize.html
+    http://localhost:8765/stylemate_v8_featurebar_mysize_ollama_v1.html
+    http://localhost:8765/stylemate_v8_featurebar_mysize_ollama_v2.html
+    http://localhost:8765/stylemate_v8_featurebar_mysize_ollama_v3.html
+    http://localhost:8765/stylemate_v8_featurebar_mysize_ollama_v4.html
+    http://localhost:8765/stylemate_v8_featurebar_mysize_ollama_v5.html
+
+Open a page above, search, and one JSON file per Ollama call appears in logs/.
+Ctrl-C to stop.
+
+  wrote logs/ollama-log_2026-10-28_02-10-13-075_colour-studio-vision.json  [ok 1411 prompt tok] TRUNCATED
+  wrote logs/ollama-log_2026-10-28_02-16-29-220_colour-studio-vision.json  [ok 1409 prompt tok] TRUNCATED
